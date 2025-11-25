@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página com Stacks</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        background-color: #0F0E0E;
+    }
+
+    header {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #0F0E0E;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header img {
+        height: 50px; /* você vai colocar o link depois */
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 20px;
+    }
+
+    .stack-main {
+        width: 700px;
+        height: 400px;
+        background-color: #303030;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.5em;
+        position: relative;
+    }
+
+    .stack-hover {
+        width: 50px;
+        height: 400px;
+        background-color: #303030;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    .stack-hover:hover {
+        width: 250px; /* expande para mostrar a stack */
+    }
+
+    .stack-hover-content {
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 200px;
+        height: 100%;
+        background-color: #303030;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .stack-hover:hover .stack-hover-content {
+        opacity: 1;
+    }
+
+    /* Stack 3 dentro da Stack 2 */
+    .stack-hover-2 {
+        width: 50px;
+        height: 100%;
+        background-color: #303030;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        transition: width 0.3s ease;
+    }
+
+    .stack-hover-2:hover {
+        width: 200px;
+    }
+
+    .stack-hover-2-content {
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 150px;
+        height: 100%;
+        background-color: #404040;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .stack-hover-2:hover .stack-hover-2-content {
+        opacity: 1;
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logovers.png" alt="VERS Logo">
+</header>
+
+<div class="container">
+    <div class="stack-main">Stack 1</div>
+    <div class="stack-hover">
+        <div class="stack-hover-content">
+            Stack 2
+            <div class="stack-hover-2">
+                <div class="stack-hover-2-content">Stack 3</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
