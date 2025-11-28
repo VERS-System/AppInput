@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #0F0E0E;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #0F0E0E;
+}
+
+header img {
+    height: 60px;
+}
+
+/* CONTAINER DAS STACKS */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    gap: 20px;
+    position: relative;
+}
+
+/* STACKS */
+.stack {
+    width: 70px;
+    height: 350px;
+    background-color: #303030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-radius: 10px;
+    color: white;
+    transition: width 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+/* STACK EXPANDIDA */
+.stack.active {
+    width: 500px;
+    background-color: #404040;
+}
