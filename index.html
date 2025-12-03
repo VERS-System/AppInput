@@ -14,28 +14,59 @@
 
     <div class="container">
 
-        <!-- STACK 1 -->
+        <!-- STACK 1 - TESTES -->
         <div class="stack" id="stack1">
-            <h2>Stack 1</h2>
-            <input id="valorA" class="input" type="text" placeholder="Valor A">
-            <input id="valorB" class="input" type="text" placeholder="Valor B">
-            <button class="btn" onclick="salvarStack1()">Salvar</button>
+            <h2>Testes</h2>
+
+            <input type="datetime-local" id="data_realizado" class="input" placeholder="Data realizado">
+            
+            <select id="satisfatoriedade" class="input">
+                <option value="" disabled selected>Satisfatório?</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+
+            <input type="number" id="numero_piezos" class="input" placeholder="Número de piezos">
+
+            <button class="btn" onclick="salvarTeste()">Salvar</button>
         </div>
 
-        <!-- STACK 2 -->
+        <!-- STACK 2 - VARIÁVEIS -->
         <div class="stack" id="stack2">
-            <h2>Stack 2</h2>
-            <input id="temperatura" class="input" type="text" placeholder="Temperatura">
-            <input id="pressao" class="input" type="text" placeholder="Pressão">
-            <button class="btn" onclick="salvarStack2()">Salvar</button>
+            <h2>Variáveis</h2>
+
+            <select id="subida" class="input">
+                <option value="" disabled selected>Estava em subida?</option>
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+            </select>
+
+            <input type="number" id="rpm_medio" class="input" placeholder="RPM médio">
+
+            <input type="number" step="0.1" id="peso_veiculo" class="input" placeholder="Peso do veículo (kg)">
+
+            <select id="tipo_terreno" class="input">
+                <option value="" disabled selected>Tipo de terreno</option>
+                <option value="terra">Terra</option>
+                <option value="asfalto">Asfalto</option>
+                <option value="paralelepipedo">Paralelepípedo</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <button class="btn" onclick="salvarVariavel()">Salvar</button>
         </div>
 
-        <!-- STACK 3 -->
+        <!-- STACK 3 - APROVAÇÃO -->
         <div class="stack" id="stack3">
-            <h2>Stack 3</h2>
-            <input id="frequencia" class="input" type="text" placeholder="Frequência">
-            <input id="amplitude" class="input" type="text" placeholder="Amplitude">
-            <button class="btn" onclick="salvarStack3()">Salvar</button>
+            <h2>Aprovação</h2>
+
+            <input type="number" step="0.1" id="amperagem" class="input" placeholder="Amperagem">
+            <input type="number" step="0.1" id="tensao" class="input" placeholder="Tensão">
+            <input type="number" step="0.1" id="voltagem" class="input" placeholder="Voltagem">
+            <input type="number" step="0.1" id="corrente_convertida" class="input" placeholder="Corrente convertida">
+            <input type="number" step="0.1" id="bateria_recarregada" class="input" placeholder="Bateria recarregada (%)">
+
+            <button class="btn" onclick="salvarAprovacao()">Salvar</button>
         </div>
 
     </div>

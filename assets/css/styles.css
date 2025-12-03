@@ -6,68 +6,74 @@ body {
     color: white;
 }
 
-/* LOGO NO TOPO CENTRALIZADA */
+/* LOGO OU TÍTULO CENTRALIZADO */
 header {
     width: 100%;
     text-align: center;
     padding: 20px 0;
 }
 
-.logo {
-    width: 120px;
-}
-
-/* CONTÊINER DAS STACKS EM LINHA */
+/* CONTAINER GERAL DO DASHBOARD */
 .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin-top: 40px;
     gap: 40px;
+    flex-wrap: wrap; /* RESPONSIVO */
 }
 
-/* CADA STACK */
+/* CAIXAS (STACKS) */
 .stack {
-    width: 260px;
+    width: 310px;
     padding: 25px;
     border-radius: 20px;
     text-align: center;
     background: linear-gradient(145deg, #1b1b1b, #0c0c0c);
     box-shadow: 5px 5px 15px #000, -5px -5px 15px #222;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
-/* STACK ATIVA NO INÍCIO */
-.stack.active {
+.stack:hover {
     opacity: 1;
     transform: scale(1.05);
 }
 
-/* AO PASSAR O MOUSE */
-.stack:hover {
-    opacity: 1;
-    transform: scale(1.08);
+.stack h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
 }
 
-/* INPUTS BONITOS */
-.input {
-    margin: 20px 0;
+/* INPUTS */
+.input,
+input,
+select {
+    margin: 15px 0;
     background: none;
     border: none;
     outline: none;
-    max-width: 190px;
-    padding: 10px 20px;
-    font-size: 16px;
+    width: 80%;
+    padding: 12px 20px;
+    font-size: 15px;
     border-radius: 9999px;
     box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
     color: #fff;
+    appearance: none;
+}
+
+/* COR DO TEXTO DO SELECT */
+select option {
+    background: #0d0d0d;
+    color: white;
 }
 
 /* BOTÕES */
-.btn {
+.btn,
+button {
     margin-top: 10px;
-    padding: 10px 25px;
+    padding: 12px 28px;
     border-radius: 15px;
     background: #1e1e1e;
     border: none;
@@ -77,6 +83,13 @@ header {
     transition: 0.3s;
 }
 
+button:hover,
 .btn:hover {
     transform: scale(1.05);
+}
+
+/* REMOVER HR FEIO E POR ESPAÇAMENTO */
+hr {
+    border: none;
+    height: 40px;
 }
