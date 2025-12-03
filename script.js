@@ -1,12 +1,9 @@
-// URL base do backend FastAPI
 const API_URL = "http://127.0.0.1:8000";
 
-// ===========================
-// TESTE
-// ===========================
-document.getElementById("formTeste").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
+// ==========================
+// TESTES
+// ==========================
+async function salvarTeste() {
     const payload = {
         data_realizado: new Date(document.getElementById("data_realizado").value).toISOString(),
         satisfatoriedade: document.getElementById("satisfatoriedade").value === "true",
@@ -14,14 +11,12 @@ document.getElementById("formTeste").addEventListener("submit", async (e) => {
     };
 
     enviarDados("/testes/", payload);
-});
+}
 
-// ===========================
+// ==========================
 // VARIÁVEIS
-// ===========================
-document.getElementById("formVariavel").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
+// ==========================
+async function salvarVariavel() {
     const payload = {
         subida: document.getElementById("subida").value === "true",
         rpm_medio: parseInt(document.getElementById("rpm_medio").value),
@@ -30,14 +25,12 @@ document.getElementById("formVariavel").addEventListener("submit", async (e) => 
     };
 
     enviarDados("/variaveis/", payload);
-});
+}
 
-// ===========================
-// APROVAÇÕES
-// ===========================
-document.getElementById("formAprovacao").addEventListener("submit", async (e) => {
-    e.preventDefault();
-
+// ==========================
+// APROVAÇÃO
+// ==========================
+async function salvarAprovacao() {
     const payload = {
         amperagem: parseFloat(document.getElementById("amperagem").value),
         tensao: parseFloat(document.getElementById("tensao").value),
@@ -47,11 +40,11 @@ document.getElementById("formAprovacao").addEventListener("submit", async (e) =>
     };
 
     enviarDados("/aprovacoes/", payload);
-});
+}
 
-// ===========================
+// ==========================
 // FUNÇÃO GENÉRICA PARA POST
-// ===========================
+// ==========================
 async function enviarDados(endpoint, payload) {
     try {
         const response = await fetch(API_URL + endpoint, {
