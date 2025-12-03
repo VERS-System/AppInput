@@ -3,21 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stacks VERS</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>VERS Dashboard</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<header>
-    <img src="logovers.png" alt="VERS Logo">
-</header>
+    <header>
+        <img src="logovers.png" class="logo" alt="VERS Logo">
+    </header>
 
-<div class="container">
-    <div class="stack stack-main active" data-stack="1">Stack 1</div>
-    <div class="stack stack-2" data-stack="2">Stack 2</div>
-    <div class="stack stack-3" data-stack="3">Stack 3</div>
-</div>
+    <div class="container">
 
-<script src="script.js"></script>
+        <!-- STACK 1 -->
+        <div class="stack" id="stack1">
+            <h2>Stack 1</h2>
+            <input id="valorA" class="input" type="text" placeholder="Valor A">
+            <input id="valorB" class="input" type="text" placeholder="Valor B">
+            <button class="btn" onclick="salvarStack1()">Salvar</button>
+        </div>
+
+        <!-- STACK 2 -->
+        <div class="stack" id="stack2">
+            <h2>Stack 2</h2>
+            <input id="temperatura" class="input" type="text" placeholder="Temperatura">
+            <input id="pressao" class="input" type="text" placeholder="Pressão">
+            <button class="btn" onclick="salvarStack2()">Salvar</button>
+        </div>
+
+        <!-- STACK 3 -->
+        <div class="stack" id="stack3">
+            <h2>Stack 3</h2>
+            <input id="frequencia" class="input" type="text" placeholder="Frequência">
+            <input id="amplitude" class="input" type="text" placeholder="Amplitude">
+            <button class="btn" onclick="salvarStack3()">Salvar</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

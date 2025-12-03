@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* LOGO NO TOPO CENTRALIZADA */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* CONTÊINER DAS STACKS EM LINHA */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 40px;
+}
+
+/* CADA STACK */
+.stack {
+    width: 260px;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    background: linear-gradient(145deg, #1b1b1b, #0c0c0c);
+    box-shadow: 5px 5px 15px #000, -5px -5px 15px #222;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.4;
+}
+
+/* STACK ATIVA NO INÍCIO */
+.stack.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* AO PASSAR O MOUSE */
+.stack:hover {
+    opacity: 1;
+    transform: scale(1.08);
+}
+
+/* INPUTS BONITOS */
+.input {
+    margin: 20px 0;
+    background: none;
+    border: none;
+    outline: none;
+    max-width: 190px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #fff;
+}
+
+/* BOTÕES */
+.btn {
+    margin-top: 10px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    background: #1e1e1e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #000;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
